@@ -4,7 +4,7 @@ Cybersecurity Capstone Project: a secure messaging and file transfer prototype t
 This application was developed using TypeScript, HTML, and CSS. 
 
 ## Security Features
-- End-to-end encrypted messaging (AES-256-GCM)
+- End-to-end encryption (AES-256-GCM)
 - Secure file transfer functionality
 - Signal Protocol integration
 - Certificate-based server authentication
