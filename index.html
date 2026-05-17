@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content=
+    "width=device-width, initial-scale=1.0" />
+
+  <!-- Initialize classes for each UI object -->
+  <style>
+      .chat-container {
+          max-width: 600px;
+          margin: 50px auto;
+          background-color: #fff;
+          border-radius: 8px;
+          overflow: hidden;
+          padding-bottom: 20px;
+      }
+
+      .chat-header {
+        padding: 15px;
+        font-weight: bold;
+      }
+
+      .message-container {
+          display: flex;
+          flex-direction: column;
+          padding: 0 10px;
+      }
+
+      .message {
+          padding: 10px;
+          margin: 10px;
+          border-radius: 5px;
+          max-width: 70%;
+          word-wrap: break-word;
+      }
+
+      .receiver-message {
+          background-color: #e0e0e0;
+          color: #000;
+          align-self: flex-start;
+      }
+
+      .sender-message {
+          background-color: #4CAF50;
+          color: #fff;
+          align-self: flex-end;
+      }
+
+      .message-input-area {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .message-input-area input[type="text"] {
+          width: calc(100% - 20px);
+          padding: 8px;
+          margin: 10px;
+          box-sizing: border-box;
+      }
+
+      .message-input-area button {
+          width: calc(100% - 20px);
+          padding: 8px;
+          margin: 10px;
+          box-sizing: border-box;
+          background-color: #4CAF50;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+      }
+
+      .file-section {
+        margin: 10px;
+        padding: 10px;
+        border-top: 1px solid #ccc
+      }
+
+      .file-section h3 {
+        margin-bottom: 10px;
+      }
+
+      .file-section input[type="file"] {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .file-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+      }
+  </style>
+</head>
+
+<!-- Define structure of UI -->
+<body>
+  <h1 style="text-align:center;">Secure Messenger</h1>
+  <div class="chat-container">
+    <div class="chat-header">
+      Talking to: <span id="chatPartner"></span>
+    </div>
+
+    <div id="messages" class="message-container"></div>
+
+    <div class="message-input-area">
+      <input id="messageInput" type="text" placeholder="Type your message...">
+      <button id="sendButton">Send</button>
+    </div>
+
+    <div class="file-section">
+      <h3>Send a File</h3>
+      <input id="fileInput" type="file" />
+      <button id="sendFileButton">Send File</button> 
+
+      <h3>Received Files</h3>
+      <div id="fileList" class="file-list"></div>
+    </div>
+  </div>
+  
+<!-- Load renderer file -->
+<script src="dist/src/renderer/renderer.js"></script>
+</body>
+</html>
